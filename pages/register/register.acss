@@ -1,0 +1,98 @@
+.rbox{
+  width: 750rpx;
+  height: 100vh;
+  background: #F7F7F7;
+}
+.topbox{
+  width: 100%;
+  padding:24rpx 0 36rpx;
+  background: #fff;
+  margin-bottom: 20rpx
+}
+.r_top{
+  width: 700rpx;
+  height: 360rpx;
+  margin: 0 auto;
+  background-image: url("../../imgs/r_card.png");
+  background-size: cover;
+  background-position: center;
+  padding: 45rpx;
+  position: relative
+}
+.r_tit{
+  font-size: 52rpx;
+  color: #fff;
+  font-weight: bolder;
+  margin-bottom: 12rpx
+}
+.r_slogan{
+  font-size: 26rpx;
+  color: #fff;
+}
+.r_num{
+  font-size: 52rpx;
+  color: #fff;
+  position: absolute;
+  left: 45rpx;
+  bottom: 45rpx
+}
+.r_title{
+  width: 100%;
+  height: 90rpx;
+  background: #fff;
+  padding:30rpx 36rpx 0;
+  font-size: 37rpx;
+  color: #333333;
+  font-weight: bolder
+}
+.r_cont{
+  width: 100%;
+  background: #fff;
+  padding:0 36rpx;
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 64rpx;
+  margin-bottom: 20rpx;
+}
+.r_item{
+  width: 100%;
+  height: 64rpx;
+  border-top: 1rpx solid #EEEEEE;
+}
+.r_phoneBox{
+  width: 100%;
+  padding: 0 35rpx;
+  background: #fff;
+}
+.r_phone{
+  align-items: center;
+  width: 100%;
+  height: 64rpx;
+  font-size: 28rpx;
+  border-top: 1rpx solid #EEEEEE;
+  color: #666
+}
+.m_btn{
+  border: none;
+  color: #108EE9;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx
+}
+.m_btn2{
+  width: 400rpx;
+  height: 80rpx;
+  margin: 65rpx auto 0;
+  border-radius: 10rpx;
+}
+.inp_m{
+  width: 320rpx
+}
+.codeBtn{
+  width: 240rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color:#108EE9;
+  border: none
+}

@@ -1,0 +1,31 @@
+.settings{
+  width: 100%;
+  height: 100%;
+}
+.item{
+  width: 100%;
+  height: 110rpx;
+  border-bottom: 2rpx solid #D8D8D8;
+  align-items: center;
+  padding:0 36rpx;
+}
+.item_l{
+  font-size: 28rpx;
+  color: #000;
+  align-items: center
+}
+.item_l image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 24rpx;
+}
+.item_r{
+  font-size: 22rpx;
+  color: #999999;
+  align-items: center
+}
+.item_r image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 12rpx
+}

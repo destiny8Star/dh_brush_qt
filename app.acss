@@ -1,0 +1,60 @@
+page {
+  /* flex: 1;
+  display: flex; */
+  /* background:red; */
+  font-family: "微软雅黑";  
+}
+
+view{
+box-sizing: border-box;
+}
+image{
+width:100%;
+height: 100%;
+}
+.flex{
+display: flex;
+flex-wrap: wrap;
+}
+.flex_be{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.flex_ar{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-around
+}
+.flex_ros{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: flex-start
+}
+.flex_cl{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column
+}
+
+.flex_clb{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: space-between
+}
+.flex_end{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: flex-end
+}
+.overT{
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

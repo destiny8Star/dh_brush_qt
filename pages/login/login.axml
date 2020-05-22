@@ -1,0 +1,33 @@
+<block a:if='{{status==0}}'>
+  <view class="login">
+    <view class="l_tips">您好,</view>
+    <view class="l_tips">请登录商家账号</view>
+    <view class="form">
+      <form onSubmit="onSubmit" >
+          <view class="l_name"><input placeholder="请输入账号" name='name' onInput='inpName'/></view>
+          <view class="l_name"><input placeholder="请输入密码" password="true" name='pass' onInput='inpPass'/></view>
+          <button size="default" type="{{canlog?'primary':'ghost'}}" class="l_btn"  formType="submit" disabled="{{!canlog}}">登录</button>
+      </form>
+    </view>
+  </view>
+</block>
+<block a:else>
+   <view class="login">
+      <view class="l_tips l_done">已登录商家账号</view>
+      <view class="l_infos">
+          <view class="l_infos_line flex">
+              <view class="l_infos_label">账号:</view>
+              <view class="l_infos_cont">{{infos.account}}</view>
+          </view>
+          <view class="l_infos_line flex">
+              <view class="l_infos_label">门店名:</view>
+              <view class="l_infos_cont">{{infos.shop_name}}</view>
+          </view>
+          <view class="l_infos_line flex">
+              <view class="l_infos_label">员工:</view>
+              <view class="l_infos_cont">{{infos.mer_name}}</view>
+          </view>
+      </view>
+      <button size="default" type="primary" class="l_btn" onTap="outLogin">退出登录</button>
+   </view>
+</block>

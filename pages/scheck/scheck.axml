@@ -1,0 +1,12 @@
+<view class="login">
+  <view class="l_tips">您好,</view>
+  <view class="l_tips">请输入手机号查询卡券</view>
+  <view class="form">
+    <form onSubmit="onSubmit">
+      <view class="l_name">
+        <input placeholder="请输入手机号" name='name' type="number" onInput='getName' maxlength='11'/></view>
+      <button type="primary" class="l_btn" formType="submit">确认</button>
+    </form>
+  </view>
+  <view class="mp_out" onTap="out">退出</view>
+</view>

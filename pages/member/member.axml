@@ -1,0 +1,30 @@
+<view>
+  <view class="member">
+      <view class="m_tit">支付金额</view>
+      <view class="m_price">￥{{amount}}</view>
+      <view class="m_mine">
+         <image mode="scaleToFill" src="../../imgs/active.png"/></view>
+      <view class="m_btnbox" onTap="toMem" a:if="{{card_status==1}}">
+         <view class="m_btnimg">注册会员</view>
+         <button type="primary" class="m_btn">会员支付</button>
+      </view>
+      <!--<view class="m_btnbox"><view class="m_btnimg">注册会员</view><button type="primary" class="m_btn" open-type="getAuthorize" onGetAuthorize="onGetAuthorize" onError="onAuthError" scope='phoneNumber'>
+         会员支付</button></view> -->
+      <button type="primary" class="m_btn" onTap="toPay">刷脸支付</button>
+      <button type="primary" class="m_btn" onTap="toCard" a:if="{{coupon_status==1}}">卡券支付</button>
+   
+   </view>
+      <view class="m_out" onTap="out">退出</view>
+      <!-- 弹框展示小程序二维码 -->
+      <view class="mask" onTap="hideMask" hidden="{{isMask}}">
+         <view class="mask_box" catchTap="toPay" >
+              <view class="qrBox">
+                <image mode="scaleToFill" src="{{apiHost+'/public/mer/wx/get/qr/code/img?jwtStr='+token}}"/>
+              </view>
+         </view>
+         <view class="mask_btn flex_ar" a:if="{{card_status==1||coupon_status==1}}">
+            <view class="mask_btnItem" catchTap="toMem" a:if="{{card_status==1}}" >会员支付</view> 
+            <view class="mask_btnItem" catchTap="toCard" a:if="{{coupon_status==1}}" >卡券支付</view> 
+         </view>
+      </view>
+</view>

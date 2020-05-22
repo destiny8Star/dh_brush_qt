@@ -1,0 +1,11 @@
+<view class="mempay">
+  <view class="mp_tit">会员{{smobile}}，您好！</view>
+  <view class="mp_tit2">支付金额</view>
+  <view class="mp_tit3">￥{{amount}}</view>
+  <view class="mp_ye flex_be">
+      <view>会员余额</view>
+      <view class="mp_mon">{{money}}元</view>
+   </view>
+  <button type="primary" class="mp_btn" onTap="memPay">确认支付</button>
+  <view class="mp_out" onTap="out">退出({{num}})</view>
+</view>

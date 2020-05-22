@@ -1,0 +1,73 @@
+<import src='../../template/alerts/alerts'/>
+  
+<view class="page">
+  <!-- 弹框start -->
+  <block a:if='{{hasAlert}}'>
+    <template is='alerts' data='{{...infos}}' ></template>
+  </block>  
+  <!-- end -->
+  <view class="imgbox">
+      <!-- <image mode="scaleToFill" src="{{img}}"/> -->
+      <swiper 
+        style="height:100%"
+        class="demo-swiper"
+        duration = "300"
+        autoplay={{true}}
+        interval="8000"
+        circular="false"
+      >
+      <!-- 后台配置所有机器都有的广告 -->
+      <block a:if="{{!isNew}}">
+        <swiper-item >
+           <!-- //提审时候展示 -->
+          <view class="swiper-item" a:if="{{isTs==1}}">
+             <image mode="scaleToFill" src="{{tsimg}}"/>
+              <view class="cover"><image mode="scaleToFill" src="{{index_logo}}"/></view>   
+          </view>
+            <!-- 正常展示 -->
+          <view class="swiper-item" a:if="{{isTs==0}}">
+             <image mode="scaleToFill" src="{{img}}"/>
+              <view class="cover"><image mode="scaleToFill" src="{{index_logo}}"/></view>   
+          </view>
+        </swiper-item>
+      </block>  
+      <!-- 后台配置广告 -->
+        <!-- 推广的商城小程序广告 -->
+       <block a:if="{{isNew}}">
+          <swiper-item >
+            <view class="swiper-item">
+              <image mode="scaleToFill" src="../../imgs/i_hsh.png"/>
+              <view class="cover_we"><image mode="scaleToFill" src="{{apiHost+'/public/mer/wx/get/qr/code/img?jwtStr='+token}}"/></view> 
+            </view>
+          </swiper-item>
+       </block>
+      
+        <!-- 小程序 -->
+
+        <swiper-item a:if='{{toH5}}'>
+          <view class="swiper-item swiper-item2" >
+             <view class="item_img" >
+               <image mode="scaleToFill" src="../../imgs/i_industry.png"/>
+             </view>
+             <view class="item_btn flex_be">
+                 <view class="btnitem" onTap="toOtherh5"  data-type='{{item.id}}'  data-url='{{item.url}}' a:for="{{industrys}}" a:key="{{index}}">
+                   {{item.name}}
+                 </view>
+             </view>
+              <view class="cover"><image mode="scaleToFill" src="{{index_logo}}"/></view>   
+          </view>
+        </swiper-item>
+        <!-- 店铺配置的 -->
+        <block a:for="{{adds}}">
+          <swiper-item key="{{index}}">
+            <view class="swiper-item">
+               <image mode="aspectFill" src="{{item.poster_url}}"/>
+               <view class="cover"><image mode="scaleToFill" src="{{index_logo}}"/></view>   
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <!-- <view class="cover"><image mode="scaleToFill" src="{{index_logo}}"/></view>    -->
+    <!-- <button type="ghost" onTap="toHy">会员</button> -->
+</view>

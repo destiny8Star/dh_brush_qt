@@ -1,0 +1,107 @@
+.member{
+  width: 100%;
+  height: 100%;
+  padding:50rpx 64rpx 0 
+}
+.m_tit{
+  text-align: center;
+  font-size: 46rpx;
+  color: #333333
+}
+.m_price{
+  text-align: center;
+  font-size: 60rpx;
+  color: #108EE9;
+  margin-top: 32rpx
+}
+.m_mine{
+  width: 100%;
+  height: 378rpx;
+  background: #939393;
+  margin:40rpx 0 50rpx;
+  border-radius: 15rpx;
+  overflow: hidden
+}
+.m_btn{
+  width: 480rpx;
+  height: 80rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  margin: 0 auto 25rpx
+}
+.m_btnbox{
+  margin:0 auto 25rpx;
+  position: relative;
+  width: 480rpx;
+  height: 80rpx;
+}
+.m_btnimg{
+  width: 166rpx;
+  height: 63rpx;
+  background-image: url('../../imgs/m_btn.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -30rpx;
+  right: -66rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 63rpx
+}
+.m_out{
+  position: fixed;
+  bottom: 24rpx;
+  left: 50%;
+  font-size: 32rpx;
+  color: #108EE9;
+  transform: translateX(-50%)
+}
+.mask{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0
+}
+.mask_box{
+  width: 600rpx;
+  height: 700rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+  background-image: url("../../imgs/mer_mask.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+.qrBox{
+  width: 210rpx;
+  height: 210rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 320rpx auto 0;
+}
+.mask_btn{
+  width: 600rpx;
+  padding: 32rpx 100rpx;
+  background: linear-gradient(to bottom right,rgba(221,82,79,1),rgba(149,16,20,1));
+  border-radius: 30rpx;
+  position: absolute;
+  bottom:5%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+.mask_btnItem{
+  width:180rpx;
+  height:85rpx;
+  background:rgba(255,216,29,1);
+  box-shadow:0 5rpx 10rpx 0 rgba(0, 0, 0, 0.5);
+  border-radius:43rpx;
+  text-align: center;
+  line-height: 85rpx;
+  font-size: 30rpx
+}

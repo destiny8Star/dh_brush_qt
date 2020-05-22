@@ -1,0 +1,5 @@
+<view>
+  <web-view id="web-view" src="{{url}}" onMessage="onmessage"></web-view>
+  <!-- <web-view id="web-view" src="https://test2.cikwan.top/gas" onMessage="onmessage"></web-view> -->
+  
+</view>

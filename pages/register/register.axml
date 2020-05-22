@@ -1,0 +1,41 @@
+<view class="rbox">
+       <view class="topbox">
+              <view class="r_top">
+                     <view class="r_tit">{{cardInfo.card_info.card_name}}</view>
+                     <view class="r_slogan">{{cardInfo.card_info.card_slogan||"会员专属"}}</view>
+                     <view class="r_num">5689 **** **** 5716</view>
+              </view>
+       </view>
+       <view class="r_title">当前活动</view>
+       <view class="r_cont">
+              <view class="r_item" a:for="{{cardInfo.activy_info_list}}" a:key="{{index}}">{{item.activy_rule}}</view>
+       </view>
+       <view class="r_title">个人信息</view>
+       <!-- //可以一键获取 -->
+       <block a:if="{{is_ali_auto_phone}}">
+              <view class="r_phoneBox">
+                     <view class="r_phone flex_be">
+                            <text style="color:#333">手机号</text>
+                            <button a:if="{{!mobile}}" class="m_btn" open-type="getAuthorize" onGetAuthorize="onGetAuthorize" onError="onAuthError" scope='phoneNumber'>
+       一键获取手机号
+                            </button>
+                            <text a:else>{{mobile}}</text>
+                     </view>
+              </view>
+       </block>
+       <!-- 短信验证码获取 -->
+        <block a:else>
+              <view class="r_phoneBox">
+                     <view class="r_phone flex_be">
+                            <!-- <text style="color:#333">手机号</text> -->
+                            <input placeholder="请输入手机号"  type="number" class="inp_m" maxlength="11" onInput="setPhone"/>
+                     </view>
+                     <view class="r_phone flex_be">
+                            <!-- <text style="color:#108EE9">点击获取验证码</text> -->
+                            <input placeholder="请输入验证码"  type="number" class="inp_m" maxlength="6" onInput="setCode"/>
+                            <button  class="codeBtn" disabled="{{wait}}" onTap="getCode">{{codeWoc}}</button>
+                     </view>
+              </view>
+       </block>
+       <button type="primary" class="m_btn2" onTap="getCard" disabled="{{flag}}">立即领取</button>
+</view>

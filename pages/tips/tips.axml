@@ -1,0 +1,7 @@
+<view class="tips">
+    <view class="topImg"><image mode="scaleToFill" src="../../imgs/t_1.png"/></view>
+    <view class="tips_tit">请先登录商家收银账号</view>
+    <view class="tips_tit tips_titm">提示：点击小键盘设置 - 登录商家账号</view>
+    <view class="tips_line"></view>
+    <view class="tips_bot"><image mode="scaleToFill" src="/imgs/active.png"/></view>
+</view>

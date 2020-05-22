@@ -1,0 +1,38 @@
+<view class="mempay">
+  <view class="mp_tit">会员{{user_no}}，您好！</view>
+  <!-- 余额足 -->
+  <block a:if='{{status == 1}}'>
+    <view class="mp_tit2">支付金额</view>
+    <view class="mp_tit3">￥{{amount}}</view>
+    <view class="mp_ye flex_be">
+      <view>会员余额</view>
+      <view class="mp_mon">{{money}}元</view>
+    </view>
+    <block a:if="{{infos.length!=0}}">
+      <view class="mp_ye flex_be mp_yh">
+        <text > {{infos[0].coupon_info}}</text>
+        <checkbox checked="{{hasYH}}" onChange='checkYH' style='border:1rpx solid #108EE9;border-radius:50%'/></view>
+    </block>
+    <block a:else>
+      <view class="mp_ye flex_be mp_yh2">
+        <text> 无可用卡券</text>
+      </view>
+    </block>
+    <button type="primary" class="mp_btn" onTap="memPay">确认支付</button>
+    <view class="mp_tips">若需充值，请联系收银员充值</view>
+  </block>
+  <!-- 余额不足  mpn-->
+  <block a:else>
+    <view class="mp_tit2 mpn_tit2">会员余额不足</view>
+    <view class="mp_ye flex_be">
+      <view>支付金额</view>
+      <view class="mp_mon">{{amount}}元</view>
+    </view>
+    <view class="mp_ye flex_be">
+      <view>会员余额</view>
+      <view class="mp_mon mpn_mon">{{money}}元</view>
+    </view>
+    <view class="mp_tips mpn_tips">请联系收银员充值</view>
+  </block>
+  <view class="mp_out" onTap="out">退出({{num}})</view>
+</view>

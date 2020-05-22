@@ -1,0 +1,15 @@
+<view class="login">
+    <view class="l_tips">您好,</view>
+    <view class="l_tips">请输入手机号开卡</view>
+    <view class="form">
+      <form onSubmit="onSubmit" >
+          <view class="l_name"><input placeholder="请输入手机号" name='name' type="number" onInput='getName' maxlength='11'/></view>
+          <view class="l_name flex_be">
+            <input placeholder="请输入验证码" name='pass' class="inp_yzm" type="number" maxlength='6'/>
+            <button  type="primary" class="o_btn" onTap="getCode" disabled="{{codeText!='获取验证码'}}">{{codeText}}</button>
+          </view>
+          <button  type="primary" class="l_btn"  formType="submit">注册</button>
+      </form>
+    </view>
+    <view class="mp_out" onTap="out">退出</view>
+  </view>

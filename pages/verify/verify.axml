@@ -1,0 +1,103 @@
+<view class="verify">
+  <!-- 支付状态 -->
+  <block>
+      <block a:if="{{payStatus==1}}">
+          <view class="v_title ">查询中</view> 
+          <view class="spinner">
+            <view class="dot1"></view>
+            <view class="dot2"></view>
+          </view> 
+      </block> 
+      <block a:if="{{payStatus==2}}">
+          <view class="v_title ">支付成功</view> 
+          <view class="v_money">{{amount}}元</view>  
+      </block> 
+      <block a:if="{{payStatus==3}}">
+          <view class="v_title ">支付失败</view> 
+          <view class="v_money">请联系收银员</view>  
+      </block> 
+      
+  </block>
+  <!-- 底部内容 -->
+  <view class="activyBox flex" a:if="{{payStatus==2}}">
+    <!-- 底部一件领取内容 -->
+        <block a:if="{{cards.length>0}}">
+          <view class="v_colBox">
+              <swiper 
+              style="height:100%"
+              class="demo-swiper"
+              duration = "300"
+              autoplay="true"
+              interval="3000"
+            >
+            <block  a:for="{{newCards}}" a:key="{{index}}">
+              <swiper-item key="{{index}}">
+                <view class="swiper-item flex_ar" onTap="toCardPage">
+                    <view class="item_box {{inner.status&&inner.status==1?'item_box2':''}}" a:for="{{item}}"  a:for-index="idx" a:for-item="inner" a:key="{{idx}}" >
+                        <view class="item_mon">{{inner.discount_short_desc}}</view>
+                        <view class="item_mon item_name">{{inner.mer_subject_name}}</view>
+                    </view>
+                </view>
+              </swiper-item>
+            </block>
+            </swiper>
+            <view class="v_colBtn"> <button class="v_colBtnBox {{allBtn?'allSel':''}}" onTap="toGetAll" disabled="{{allBtn}}">{{allBtn?"已领取":"一键领取"}}</button></view>
+          </view>
+        </block>
+        <!-- 刮刮乐 -->
+        <block a:if="{{type&&type!=0}}">
+          <view class='v_activy flex' >
+            <view class='va_img'><image mode="scaleToFill" src="{{activies[type-1].image}}"/></view> 
+            <view class="va_right flex_be">
+                <view class="va_rightL">
+                    <view class="va_rightTit">{{activies[type-1].title}}</view>
+                    <view class="va_rightCon">{{activies[type-1].cont}} </view>
+                </view>
+                  <view class="va_rightBtn" onTap="toH5">{{activies[type-1].btn}}</view>
+            </view> 
+          </view>  
+        </block>
+        <!-- //广告 -->
+        <block a:if="{{!isNew&&adds.length!=0}}">
+          <view class="or_bot"  onTap="toPoster"><image mode="scaleToFill" src="{{adds[0].poster_url}}"/></view>
+        </block>
+        <!-- 小程序 -->
+        <block a:if="{{isNew}}">
+          <view class="or_bot2">
+              <view class="or_bot2_we">
+                <image mode="scaleToFill" src="{{apiHost+'/public/mer/wx/get/qr/code/img?jwtStr='+token}}"/>
+              </view>
+          </view>
+        </block>
+  </view>
+
+  <view class="mp_out" onTap="out">退出({{num}})</view>
+</view>
+<!-- //弹框 -->
+<view class="c_toast" a:if="{{istoast}}">
+  <view class="c_tbox" >
+    <view class="c_tTit">请输入手机号领取</view>
+    <!-- 可以一键领取 -->
+    <block a:if="{{is_ali_auto_phone}}">
+      <view class="c_getPhone">
+        <button a:if="{{!mobile}}" type="primary" class="m_btn" open-type="getAuthorize" onGetAuthorize="onGetAuthorize" onError="onAuthError" scope='phoneNumber'>
+        一键获取手机号
+        </button>
+        <text a:else>手机号: {{mobile}}</text>
+      </view>
+    </block>
+    <block a:else>
+      <view class="c_tphone">
+        <input placeholder="请输入手机号" type="number" class="inp_m" maxlength="11" onInput="setPhone"/>
+      </view>
+      <view class="c_tphone flex_be">
+        <input placeholder="请输入验证码" type="number" class="inp_m" maxlength="6" onInput="setCode"/>
+        <button class="codeBtn" disabled="{{wait}}" onTap="getCode">{{codeWoc}}</button>
+      </view>
+    </block>
+    <view class="c_btnbox flex_be">
+      <view class="c_btnCan" onTap="cancel">取消</view>
+      <view class="c_btnCon" onTap="register">确定</view>
+    </view>
+  </view>
+</view>

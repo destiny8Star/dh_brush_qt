@@ -1,0 +1,40 @@
+<view class="settings">
+    <view class="item flex_be" onTap="toLogin">
+        <view class="item_l flex">
+           <image mode="scaleToFill" src="/imgs/s_login.png" />
+            登录商家账号
+        </view>
+        <view class="item_r flex">
+            {{status}}
+            <image mode="scaleToFill" src="/imgs/s_arr.png"/>
+        </view>
+    </view>
+    <view class="item flex_be" onTap="toSet">
+      <view class="item_l flex">
+           <image mode="scaleToFill" src="/imgs/s_xt.png" />
+            系统设置
+        </view>
+        <view class="item_r flex">
+            <image mode="scaleToFill" src="/imgs/s_arr.png"/>
+        </view>
+    </view>
+    <view class="item flex_be" onTap="getPrint">
+      <view class="item_l flex">
+           <image mode="scaleToFill" src="/imgs/s_dy.png" />
+            检查打印机状态
+        </view>
+        <view class="item_r flex">
+           {{pSta}}
+            <image mode="scaleToFill" src="/imgs/s_arr.png"/>
+        </view>
+    </view>
+   <view class="item flex_be" onTap="toQrcode">
+      <view class="item_l flex">
+           <image mode="scaleToFill" src="/imgs/s_qr.png" />
+            二维码收款
+        </view>
+        <view class="item_r flex">
+            <image mode="scaleToFill" src="/imgs/s_arr.png"/>
+        </view>
+    </view>
+</view>

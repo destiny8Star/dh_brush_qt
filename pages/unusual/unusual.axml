@@ -1,0 +1,26 @@
+<block a:if="{{status == 0}}">
+    <view class="unusual">
+        <view class="u_img"><icon type="warn" size="106" /> </view>
+        <view class="u_woc">支付失败</view>
+        <view class="u_tips">{{msg}}</view>
+    </view>
+</block>
+<block a:else>
+    <view class="unusual">
+        <block a:if='{{status == 1}}'>
+            <!-- <view class="u_img"> <icon type="waiting" size="106" class="ani"/></view> -->
+            <view class="spinner">
+                <view class="dot1"></view>
+                <view class="dot2"></view>
+            </view> 
+            <view class="u_woc">等待支付</view>
+            <view class="u_tips">等待用户输入密码</view>
+        </block>
+        <block a:elif='{{status == 2}}'>
+            <view class="u_img"> <icon type="success" size="106" /></view>
+            <view class="u_woc">支付成功</view>
+            <view class="u_tips">即将返回</view>
+        </block>
+        
+    </view>
+</block>

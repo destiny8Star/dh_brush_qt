@@ -1,0 +1,8 @@
+<template name='alerts'>
+    <view class="mask">
+        <view class="mbox">
+            <view class="mtit">提示</view>
+            <view class="mcont">{{cont}}</view>
+        </view>
+    </view>
+</template>

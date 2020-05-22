@@ -1,0 +1,5 @@
+<view>
+  <!-- <web-view id="web-view" src="https://ssl-h5.activity.pay.dianjishenghuo.cn/c93282170b55045cde547e0a95aed771.html" onMessage="onmessage"></web-view> -->
+  <web-view id="web-view" src="{{url}}" onMessage="onmessage"></web-view>
+  
+</view>

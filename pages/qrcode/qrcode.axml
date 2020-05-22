@@ -1,0 +1,7 @@
+<view class="qrcode">
+    <view class="qr_box">
+        <view class="qr_tit">扫一扫 向我付款</view>
+        <view class="qr_img"><image src="{{imgSrc}}"></image></view>
+        <view class="qr_tit">{{merName}}</view>
+    </view>  
+</view>

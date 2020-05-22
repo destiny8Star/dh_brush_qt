@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tips/tips",
+    "pages/settings/settings",
+    "pages/login/login",
+    "pages/unusual/unusual",
+    "pages/member/member",
+    "pages/mempay/mempay",
+    "pages/payres/payres",
+    "pages/recharge/recharge",
+    "pages/opencard/opencard",
+    "pages/openres/openres",
+    "pages/facemem/facemem",
+    "pages/facemempay/facemempay",
+    "pages/memcheck/memcheck",
+    "pages/verify/verify",
+    "pages/scheck/scheck",
+    "pages/smempay/smempay",
+    "pages/ccheck/ccheck",
+    "pages/activyH5/activyH5",
+    "pages/otherH5/otherH5",
+    "pages/register/register",
+    "pages/coupons/coupons",
+    "pages/qrcode/qrcode"
+  ],
+  "window": {
+    "defaultTitle": "",
+    "titleBarColor": "#108EE9",
+    "allowsBounceVertical": "NO"
+  }
+}

@@ -1,0 +1,62 @@
+.login{
+  width: 100%;
+  padding:180rpx 56rpx 0;
+  height: 100%
+}
+.l_tips{
+  width: 100%;
+  font-size: 46rpx;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10rpx
+}
+.form{
+  width: 100%;
+  margin-top: 40rpx;
+}
+input{
+  font-size: 38rpx
+}
+.l_name{
+  width: 100%;
+  border-bottom: 2rpx solid #D8D8D8;
+  height: 100rpx;
+  padding: 24rpx 0
+}
+.l_btn{
+  width: 100%;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin-top: 50rpx;
+  color: #fff!important
+}
+.l_done{
+  text-align: center
+}
+.l_infos{
+  width: 100%;
+  padding:32rpx 0;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 5px 18px 0px rgba(0,0,0,0.14);
+  border-radius:9px;
+  margin:20rpx 0 80rpx;
+  font-size: 38rpx;
+  color: #333
+}
+.l_infos_line{
+  width: 100%;
+  align-items: center;
+  margin:32rpx 0
+}
+.l_infos_label{
+  width: 35%;
+  margin-right: 60rpx;
+  text-align: right
+}
+.l_infos_cont{
+  font-weight: bold;
+  max-width: 55%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}

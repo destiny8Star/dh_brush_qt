@@ -1,0 +1,20 @@
+<view class="mempay">
+  <view class="mp_tit2">支付金额</view>
+  <view class="mp_tit3">￥{{amount}}</view>
+  <view class="mp_ye flex_be" a:if="{{user_no}}">
+    <view>会员号</view>
+    <view class="mp_mon">{{user_no}}</view>
+  </view>
+  <block a:if="{{infos.length!=0}}" >
+    <view class="mp_ye flex_be mp_yh">
+      <text > {{infos[0].coupon_info}}</text>
+      <checkbox checked="{{hasYH}}" onChange='checkYH' style='border:1rpx solid #108EE9;border-radius:50%'/></view>
+  </block>
+  <block a:else>
+    <view class="mp_ye flex_be mp_yh2">
+      <text> 无可用卡券</text>
+    </view>
+  </block>
+  <button type="primary" class="mp_btn" onTap="sPay">确认支付</button>
+  <view class="mp_out" onTap="out">退出({{num}})</view>
+</view>

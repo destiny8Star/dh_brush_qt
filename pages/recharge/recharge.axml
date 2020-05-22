@@ -1,0 +1,24 @@
+<view class="recharge">
+    <view class="pr_img"><icon type="success"  size="100"></icon></view>
+    <view class="mp_tit2">会员充值成功</view>
+    <view class="mp_tit3">￥{{recPay}}</view>
+     <!-- 充值送 -->
+    <block a:if="{{list.length>0}}">
+      <view class="mp_ye flex_be pr_ye" a:for="{{list}}" a:key="{{index}}">
+        <view>{{item.id}}</view> 
+        <view class="mp_mon">{{item.value}}元</view>
+      </view>
+    </block> 
+    
+    <view class="mp_ye flex_be">
+        <view>会员卡号</view>
+        <view class="mp_mon">{{user_no}}</view>
+    </view>
+    <view class="mp_ye flex_be">
+        <view>会员余额</view>
+        <view class="mp_mon">{{money}}元</view>
+    </view>
+    <!-- <button type="primary" class="mp_btn" onTap="memPay" a:if="{{hasNum}}">立即支付</button> -->
+    <!-- <button type="primary" class="mp_btn" onTap="toFacepay"  a:else>会员支付</button> -->
+    <view class="mp_out" onTap="out">退出({{num}})</view>
+</view>

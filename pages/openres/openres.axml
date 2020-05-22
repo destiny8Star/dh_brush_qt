@@ -1,0 +1,17 @@
+<view class="openres">
+    <!-- <view class="or_img"><icon type="success" size="66"></icon></view>
+    <view class="or_tit2">会员开通成功</view>
+    <view class="or_tit3">会员卡号：{{user_no}}</view>
+    <view class="or_tit4">会员余额</view>
+    <view class="or_tit5">¥{{money}}</view> -->
+    <view class="or_top1 flex">
+      <icon type="success" size="38"></icon>
+      <view class="or_tit2">恭喜您，会员开通成功！</view>
+    </view>
+    <view class="or_tit3 flex">会员卡号：<text class="or_card">{{user_no}}</text></view>
+    <view class="or_tit3 flex">会员余额：<text class="or_card">{{money}}</text>元</view>
+
+    <view class="or_bot"><image mode="scaleToFill" src="../../imgs/active.png"/></view>
+    <view class="mp_tips">若需充值，请联系收银员充值</view>
+    <view class="mp_out" onTap="out">退出({{num}})</view>
+</view>

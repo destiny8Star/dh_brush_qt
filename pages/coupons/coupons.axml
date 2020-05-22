@@ -1,0 +1,48 @@
+<view class="cards">
+  <view class="card_item flex_be" a:for="{{cards}}" a:key='index'>
+    <view class="card_itemLeft">
+      <view class="item_tit">{{item.coupon_name}}</view>
+      <view class="item_rule">{{item.discount}}</view>
+      <view class="item_time">有效期:{{item.use_time}}</view>
+    </view>
+    <view class="card_itemRight" data-id='{{item.id}}' onTap="toGet" a:if="{{item.status==undefined}}">
+      <image mode="scaleToFill" src="../../imgs/c_btnwlq.png"/>
+    </view>
+    <view class="card_itemRight" a:elif="{{item.status&&item.status==1}}">
+      <image mode="scaleToFill" src="../../imgs/c_btnlq.png"/>
+    </view>
+  </view>
+  <!--<view class="card_item flex_be"><view class="card_itemLeft"><view class="item_tit">去昂畅通用</view><view class="item_rule">满200可用</view><view class="item_time">有效期至2019年11月30日 00:00:00</view></view><view class="card_itemRight"><image mode="scaleToFill" src="../../imgs/c_btnlq.png"/></view></view> -->
+</view>
+<!-- //一件领取 -->
+<view class="allBtnbox">
+   <button  class="allBtn" type="primary" disabled="{{allBtn}}" onTap="toGetAll">{{allBtn?"已领取":"一键领取"}}</button>
+</view>
+<!-- //弹框 -->
+<view class="c_toast" a:if="{{istoast}}">
+  <view class="c_tbox" >
+    <view class="c_tTit">请输入手机号领取</view>
+    <!-- 可以一键领取 -->
+    <block a:if="{{is_ali_auto_phone}}">
+      <view class="c_getPhone">
+        <button a:if="{{!mobile}}" type="primary" class="m_btn" open-type="getAuthorize" onGetAuthorize="onGetAuthorize" onError="onAuthError" scope='phoneNumber'>
+        一键获取手机号
+        </button>
+        <text a:else>手机号: {{mobile}}</text>
+      </view>
+    </block>
+    <block a:else>
+      <view class="c_tphone">
+        <input placeholder="请输入手机号" type="number" class="inp_m" maxlength="11" onInput="setPhone"/>
+      </view>
+      <view class="c_tphone flex_be">
+        <input placeholder="请输入验证码" type="number" class="inp_m" maxlength="6" onInput="setCode"/>
+        <button class="codeBtn" disabled="{{wait}}" onTap="getCode">{{codeWoc}}</button>
+      </view>
+    </block>
+    <view class="c_btnbox flex_be">
+      <view class="c_btnCan" onTap="cancel">取消</view>
+      <view class="c_btnCon" onTap="register">确定</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+.mempay{
+  width: 100%;
+  height: 100%;
+  padding-top: 84rpx
+}
+.mp_tit{
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+  margin-bottom: 48rpx;
+}
+.mp_tit2{
+  font-size: 46rpx;
+  color: #333;
+  text-align: center;
+  margin-bottom: 32rpx;
+}
+.mp_tit3{
+  font-size: 60rpx;
+  color: #108EE9;
+  text-align: center;
+  margin-bottom: 160rpx;
+}
+.mp_ye{
+  width: 543rpx;
+  padding-bottom: 18rpx;
+  border-bottom: 2rpx solid #D8D8D8;
+  font-size: 32rpx;
+  color: #333;
+  margin: 0 auto 20rpx;
+}
+.mp_mon{
+  font-weight: bold 
+}
+.mp_btn{
+  width: 480rpx;
+  height: 96rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  margin: 158rpx auto 32rpx;
+}
+.mp_tips{
+  text-align: center;
+  font-size: 32rpx;
+  color: #108EE9;
+  font-weight: bold
+}
+.mp_out{
+   position: fixed;
+  bottom: 24rpx;
+  left: 50%;
+  font-size: 32rpx;
+  color: #108EE9;
+  transform: translateX(-50%)
+}
+.mpn_tit2{
+  margin-bottom: 170rpx
+}
+.mpn_mon{
+  color: #FF5D5D
+}
+.mpn_tips{
+  margin-top: 260rpx
+}
+.mp_yh,.mp_yh2{
+  margin-bottom: -100rpx;
+  color: #FF5D5D;
+} 
+.mp_yh2{
+  border:none
+} 

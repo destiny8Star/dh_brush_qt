@@ -1,0 +1,7 @@
+<view class="mempay">
+  <view class="mp_tit">会员{{user_no}}，您好！</view>
+  <view class="mp_tit2">会员余额</view>
+  <view class="mp_tit3">￥{{money}}</view>
+  <view class="mp_tips">若需充值，请联系收银员充值</view>
+  <view class="mp_out" onTap="out">退出({{num}})</view>
+</view>
